@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node src/app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Henry",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
