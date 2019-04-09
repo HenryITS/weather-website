@@ -5,7 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
-const PORT = process.env.PORT || 3000   //we take the HEROKU port or local:3000
+//const PORT = process.env.PORT || 3000   //we take the HEROKU port or local:3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -97,6 +97,13 @@ app.get('*', (req, res) => {
     })
 })
 
+// app.listen(PORT, () => {
+//     console.log(`Server is up on port ${PORT}`)
+// })
+
+// Start the server
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-    console.log(`Server is up on port + ${PORT}`)
-})
+  console.log(`App listening on port ${PORT}`);
+  console.log('Press Ctrl+C to quit.');
+});

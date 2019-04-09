@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js -e hbs, js"
+    "deploy": "gcloud app deploy",
+    "start": "node app.js",
+    "system-test": "repo-tools test app",
+    "test": "npm run system-test",
+    "e2e-test": "repo-tools test deploy"
   },
   "keywords": [],
   "author": "Henry",
